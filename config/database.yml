@@ -1,0 +1,14 @@
+development:
+  adapter: postgresql
+  database: long_distance_library_development
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: long_distance_library_test
+  host: localhost
+
+production:
+  adapter: postgresql
+  database: long_distance_library_production
+  host: localhost
