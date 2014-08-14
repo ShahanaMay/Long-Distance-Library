@@ -1,0 +1,26 @@
+@import "bourbon";
+@import "neat";
+
+body.books.new main {
+  @include outer-container;
+
+  background-color: lighten(purple, 70%);
+
+  h1 {
+    @include outer-container;
+  }
+
+  div.book-main-content {
+    @include span-columns(9);
+  }
+
+  div.sidebar {
+    @include span-columns(3);
+
+    ul li {
+      font-style: italic;
+      list-style: none;
+      padding: 5px 0;
+    }
+  }
+}
