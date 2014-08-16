@@ -8,7 +8,8 @@ body.books.index main {
     @include outer-container;
 
     margin: 10px;
-    width: 100%;
+    padding: 10px;
+    text-align: center;
   }
 
   div.book-main-content {

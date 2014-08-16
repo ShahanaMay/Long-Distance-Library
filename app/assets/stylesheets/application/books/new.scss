@@ -8,6 +8,10 @@ body.books.new main {
 
   h2 {
     @include outer-container;
+
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
   }
 
   div.book-main-content {
