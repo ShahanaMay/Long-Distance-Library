@@ -1,13 +1,14 @@
 @import "bourbon";
 @import "neat";
 
-body.books.new main {
+body.books.edit main {
   @include outer-container;
 
   background-color: lighten(purple, 70%);
 
   h2 {
     @include outer-container;
+
   }
 
   div.book-main-content {

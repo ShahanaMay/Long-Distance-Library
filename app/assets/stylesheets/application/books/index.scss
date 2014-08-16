@@ -1,17 +1,27 @@
 @import "bourbon";
 @import "neat";
 
-body.books.new main {
+body.books.index main {
   @include outer-container;
-
-  background-color: lighten(purple, 70%);
 
   h2 {
     @include outer-container;
+
+    margin: 10px;
+    width: 100%;
   }
 
   div.book-main-content {
     @include span-columns(9);
+
+
+    table, tr, td {
+      border: 1px solid black;
+
+      tr, td {
+        padding: 10px;
+      }
+    }
   }
 
   div.sidebar {
