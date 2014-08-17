@@ -1,12 +1,15 @@
-<h2><%= @book.title %></h2>
-
 <div class="sidebar">
   <%= render partial: "layouts/sidebar" %>
 </div>
 
 <div class="book-main-content">
+  <%= @book.title %><br>
   <%= @book.author_last_name %>, <%= @book.author_first_name %><br>
-  <%= @book.illustrator %><br>
+  <% if @book.illustrator %>
+    <%= @book.illustrator %><br>
+  <% end %>
   <%= @book.series %><br>
-  <%= @book.isbn %>
+  <%= @book.isbn %><br>
+
+  <%= link_to "Edit", edit_book_path(@book) %>
 </div>
