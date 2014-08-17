@@ -1,0 +1,25 @@
+@import "bourbon";
+@import "neat";
+
+header {
+  background-color: darken(#D0A9F5, 10%);
+  padding: 15px;
+
+  a {
+    text-decoration: none;
+  }
+
+  .navigation-bar {
+    padding: 5px;
+  }
+
+  ul {
+    list-style-type: none;
+    display: inline-block;
+
+    li {
+      float: left;
+      padding-right: 20px;
+    }
+  }
+}
