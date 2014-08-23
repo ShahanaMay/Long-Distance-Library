@@ -5,17 +5,5 @@
 </div>
 
 <div class="book-main-content">
-
-  <fieldset>
-  	<%= form_for @book do |f| %>
-  		Title: <%= f.text_field :title %><br>
-  		Author, Last Name: <%= f.text_field :author_last_name %><br>
-      Author, First Name: <%= f.text_field :author_first_name %><br>
-      Series: <%= f.text_field :series %><br>
-      ISBN: <%= f.text_field :isbn %><br>
-      Illustrator: <%= f.text_field :illustrator %><br>
-  		<%= f.submit "Save Your Book" %>
-  	<% end %>
-  </fieldset>
-
+  <%= render partial: "form" %>
 </div>
