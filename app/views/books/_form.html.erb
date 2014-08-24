@@ -6,7 +6,10 @@
     Series: <%= f.text_field :series %><br>
     ISBN: <%= f.text_field :isbn %><br>
     Illustrator: <%= f.text_field :illustrator %><br>
-    
+    Genres: 
+    <% Genre.all.each do |genre| %>
+      
+    <% end %>
 		<%= f.submit "Save Your Book" %>
 	<% end %>
 </fieldset>
