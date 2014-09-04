@@ -27,6 +27,7 @@ class BooksController < ApplicationController
   def update
     @book = Book.find(params[:id])
     if @book.update(book_params)
+      @book.formats << Format.find(params[:id])
       redirect_to @book, notice: "Book was successfully updated. Thank you!"
     else
       render :new, alert: "Book was not updated"
@@ -50,7 +51,7 @@ class BooksController < ApplicationController
   def book_params
     params.require(:book).permit(:title, :author_last_name, 
                                 :author_first_name, :series, :isbn, 
-                                :illustrator)
+                                :illustrator, format_attributes: [:id])
   end
 
 end

@@ -6,7 +6,7 @@
     Series: <%= f.text_field :series %><br>
     ISBN: <%= f.text_field :isbn %><br>
     Illustrator: <%= f.text_field :illustrator %><br>
-    Format: <%= f.select(:id, Format.all.map{|a| [a.name, a.id]}, prompt: "select a format") %><br>
+    <!-- Format: <%= f.select(:id, Format.all.map{|a| [a.name, a.id]}, prompt: "select a format") %><br> -->
     Current Genres: 
     <ul>
       <% @book.genres.each do |genre| %>
