@@ -4,5 +4,5 @@ LongDistanceLibrary::Application.routes.draw do
     mount LetterOpenerWeb::Engine, at: "/email"
   end
 
-  resources :books
+  resources :books, :genres, :formats
 end

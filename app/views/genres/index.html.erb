@@ -1,9 +1,20 @@
-<h2>Current Genres</h2>
-
-<div class="sidebar">
-  <%= render partial: "layouts/sidebar" %>
-</div>
+<h2>Genres</h2>
 
 <div class="genre-main-content">
+  <table>
+    <% @genres.each do |genre| %>
+      <tr>
+        <td><%= genre.name %></td>
+        <td><%= button_to "Delete", genre_path(genre), method: "delete" %></td>
+      </tr>
+    <% end %>
+  </table>
   
+  <fieldset>
+    <legend>Add a new Genre</legend>
+    <%= form_for @genre do |f| %>
+      Name: <%= f.text_field :name %>
+      <%= f.submit "Add this Genre" %>
+    <% end %>
+  </fieldset>
 </div>
